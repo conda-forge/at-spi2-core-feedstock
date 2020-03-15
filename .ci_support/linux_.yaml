@@ -1,0 +1,17 @@
+c_compiler:
+- gcc
+c_compiler_version:
+- '7'
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+dbus:
+- '1'
+docker_image:
+- condaforge/linux-anvil-comp7
+glib:
+- '2.58'
+pin_run_as_build:
+  dbus:
+    max_pin: x
