@@ -2,9 +2,9 @@
 # This file is licensed under a 3-clause BSD license; see LICENSE.txt.
 
 {% set name = "at-spi2-core" %}
-{% set version = "2.35.1" %}
+{% set version = "2.36.0" %}
 {% set version_majmin = '.'.join(version.split('.', 2)[:2]) %}
-{% set sha256 = "ad97c7b6071c21ed59aeb092f3bdc592cf9edbca2710ff428d7829d65675a185" %}
+{% set sha256 = "88da57de0a7e3c60bc341a974a80fdba091612db3547c410d6deab039ca5c05a" %}
 
 package:
   name: {{ name|lower }}
@@ -16,10 +16,10 @@ source:
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('at-spi2-core', max_pin='x.x') }}
-  missing_dso_whitelist:  # [linux]
+  missing_dso_whitelist:   # [linux]
     - '*/libX11.so*'  # [linux]
 
 requirements:
@@ -50,7 +50,7 @@ about:
   license: LGPL-2.1
   license_family: LGPL
   license_file: COPYING
-  summary: 'D-Bus-based implementation of AT-SPI accessibility framework'
+  summary: D-Bus-based implementation of AT-SPI accessibility framework
   description: |
     This package includes the protocol definitions for the new D-Bus at-spi.
 
