@@ -5,7 +5,7 @@ Home: http://www.gtk.org/
 
 Package license: LGPL-2.1
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: D-Bus-based implementation of AT-SPI accessibility framework
 
@@ -19,7 +19,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Drone</td>
+    <td>
+      <a href="https://cloud.drone.io/conda-forge/at-spi2-core-feedstock">
+        <img alt="linux" src="https://img.shields.io/drone/build/conda-forge/at-spi2-core-feedstock/master.svg?label=Linux">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -37,6 +44,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9291&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/at-spi2-core-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9291&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/at-spi2-core-feedstock?branchName=master&jobName=linux&configuration=linux_aarch64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -160,4 +174,5 @@ Feedstock Maintainers
 
 * [@ryanvolz](https://github.com/ryanvolz/)
 * [@stuarteberg](https://github.com/stuarteberg/)
+* [@tschoonj](https://github.com/tschoonj/)
 
