@@ -5,9 +5,11 @@ Home: http://www.gtk.org/
 
 Package license: LGPL-2.1-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/at-spi2-core-feedstock/blob/master/LICENSE.txt)
 
 Summary: D-Bus-based implementation of AT-SPI accessibility framework
+
+Development: https://gitlab.gnome.org/GNOME/at-spi2-core
 
 This package includes the protocol definitions for the new D-Bus at-spi.
 
