@@ -18,8 +18,6 @@ build:
   skip: true  # [not linux]
   run_exports:
     - {{ pin_subpackage('at-spi2-core', max_pin='x.x') }}
-  missing_dso_whitelist:
-    - '*/libX11.so*'
 
 requirements:
   build:
@@ -29,15 +27,17 @@ requirements:
     - pkg-config
     - pthread-stubs
     - {{ compiler('c') }}
-    - {{ cdt('libx11-devel') }}
-    - {{ cdt('libxi-devel') }}
-    - {{ cdt('libxfixes-devel') }}
-    - {{ cdt('libxtst-devel') }}
-    - {{ cdt('xorg-x11-proto-devel') }}
   host:
     - dbus
     - glib
     - gobject-introspection
+    - xorg-libx11
+    - xorg-libxi
+    - xorg-libxtst
+  run:
+    - xorg-libx11
+    - xorg-libxi
+    - xorg-libxtst
 
 test:
   commands:
