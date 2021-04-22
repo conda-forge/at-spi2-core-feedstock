@@ -2,7 +2,7 @@
 # This file is licensed under a 3-clause BSD license; see LICENSE.txt.
 
 {% set name = "at-spi2-core" %}
-{% set version = "2.38.0" %}
+{% set version = "2.40.0" %}
 {% set version_majmin = '.'.join(version.split('.', 2)[:2]) %}
 
 package:
@@ -11,15 +11,13 @@ package:
 
 source:
   url: https://download.gnome.org/sources/{{ name }}/{{ version_majmin }}/{{ name }}-{{ version }}.tar.xz
-  sha256: 84e36c3fe66862133f5fe229772b76aa2526e10de5014a3778f2fa46ce550da5
+  sha256: 4196a7d30a0051e52a67b8ce4283fe79ae5e4e14a725719934565adf1d333429
 
 build:
-  number: 3
+  number: 0
   skip: true  # [not linux]
   run_exports:
     - {{ pin_subpackage('at-spi2-core', max_pin='x.x') }}
-  missing_dso_whitelist:
-    - '*/libX11.so*'
 
 requirements:
   build:
@@ -29,15 +27,17 @@ requirements:
     - pkg-config
     - pthread-stubs
     - {{ compiler('c') }}
-    - {{ cdt('libx11-devel') }}
-    - {{ cdt('libxi-devel') }}
-    - {{ cdt('libxfixes-devel') }}
-    - {{ cdt('libxtst-devel') }}
-    - {{ cdt('xorg-x11-proto-devel') }}
   host:
     - dbus
     - glib
     - gobject-introspection
+    - xorg-libx11
+    - xorg-libxi
+    - xorg-libxtst
+  run:
+    - xorg-libx11
+    - xorg-libxi
+    - xorg-libxtst
 
 test:
   commands:
