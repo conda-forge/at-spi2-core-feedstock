@@ -31,6 +31,7 @@ requirements:
     - dbus
     - glib
     - gobject-introspection
+    - libxml2
     - xorg-libx11
     - xorg-libxi
     - xorg-libxtst
