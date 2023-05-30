@@ -2,7 +2,7 @@
 # This file is licensed under a 3-clause BSD license; see LICENSE.txt.
 
 {% set name = "at-spi2-core" %}
-{% set version = "2.48.2" %}
+{% set version = "2.48.3" %}
 {% set version_majmin = '.'.join(version.split('.', 2)[:2]) %}
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://download.gnome.org/sources/{{ name }}/{{ version_majmin }}/{{ name }}-{{ version }}.tar.xz
-  sha256: 86ebcb55f678381d7ed7825736add42dfccb70ad3b981dfd65d72e58f87828ee
+  sha256: 37316df43ca9989ce539d54cf429a768c28bb38a0b34950beadd0421827edf55
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not linux]
   run_exports:
     - {{ pin_subpackage('at-spi2-core', max_pin='x.x') }}
