@@ -19,6 +19,6 @@ docker_image:
 glib:
 - '2'
 libxml2:
-- '2.12'
+- '2'
 target_platform:
 - linux-aarch64
