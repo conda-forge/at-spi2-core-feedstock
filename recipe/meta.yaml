@@ -18,6 +18,8 @@ build:
   skip: true  # [not linux]
   run_exports:
     - {{ pin_subpackage('at-spi2-core', max_pin='x.x') }}
+  ignore_run_exports_from:
+    - zlib
 
 requirements:
   build:
@@ -36,6 +38,7 @@ requirements:
     - xorg-libx11
     - xorg-libxi
     - xorg-libxtst
+    - zlib
   run:
     - xorg-libx11
     - xorg-libxi
