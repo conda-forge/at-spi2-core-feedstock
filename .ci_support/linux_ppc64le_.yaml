@@ -22,3 +22,5 @@ libxml2:
 - '2'
 target_platform:
 - linux-ppc64le
+zlib:
+- '1'
