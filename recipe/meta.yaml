@@ -14,7 +14,7 @@ source:
   sha256: b0fabea6c9742eda8c9c675f9b8c1d1babba1da82da03ea1103710233717c1b0
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
   run_exports:
     - {{ pin_subpackage('at-spi2-core', max_pin='x.x') }}
