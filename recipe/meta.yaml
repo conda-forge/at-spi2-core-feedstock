@@ -31,6 +31,14 @@ requirements:
     - setuptools  # needed for gobject-introspection, for now
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - dbus                   # [build_platform != target_platform]
+    - glib                   # [build_platform != target_platform]
+    - gobject-introspection  # [build_platform != target_platform]
+    - libxml2-devel          # [build_platform != target_platform]
+    - xorg-libx11            # [build_platform != target_platform]
+    - xorg-libxi             # [build_platform != target_platform]
+    - xorg-libxtst           # [build_platform != target_platform]
+    - zlib                   # [build_platform != target_platform]
   host:
     - dbus
     - glib
@@ -49,6 +57,8 @@ test:
   commands:
     - test -f $PREFIX/include/at-spi-2.0/atspi/atspi.h
     - test -f $PREFIX/lib/libatspi${SHLIB_EXT}
+    - test -f $PREFIX/lib/girepository-1.0/Atspi-2.0.typelib
+    - test -f $PREFIX/share/gir-1.0/Atk-1.0.gir
 
 about:
   home: http://www.gtk.org/
